@@ -30,11 +30,32 @@ Este proyecto es una aplicación interactiva construida con HTML5 Canvas y JavaS
 - JavaScript
 - Canvas API
 
-## 📁 Estructura
+## 🧱 Estructura del código
 
-- `index.html`: Estructura principal del proyecto.
-- `styles.css`: Estilos de la aplicación.
-- `main.js`: Lógica de dibujo, eventos y comportamiento.
+El proyecto está construido utilizando **clases JavaScript** para representar las distintas figuras. Cada tipo de figura (como `Rectángulo`, `Círculo`, `Cuadrado` y `Triángulo`) es una clase que **hereda de una superclase llamada `Figura`**.
+
+Esto permite:
+
+- Reutilizar código común como posición, color, contexto de dibujo, etc.
+- Aplicar **polimorfismo** con métodos como `draw()` y `contieneCoordenada()`.
+- Hacer más sencilla la extensión del sistema para agregar nuevas figuras.
+
+## 📁 Estructura del proyecto
+
+```
+📦 proyecto
+ ┣ 📜 index.html
+ ┣ 📂 css
+ ┃ ┗ 📜 style.css
+ ┣ 📂 js
+ ┃ ┣ 📜 main.js
+ ┃ ┣ 📜 figura.js (superclase Figura)
+ ┃ ┣ 📜 rectangulo.js
+ ┃ ┣ 📜 circulo.js
+ ┃ ┣ 📜 cuadrado.js
+ ┃ ┗ 📜 triangulo.js
+ ┗ 📸 captura.png
+```
 
 ## 🧠 Detalles técnicos
 
@@ -46,3 +67,12 @@ Este proyecto es una aplicación interactiva construida con HTML5 Canvas y JavaS
 
 > _Proyecto en acción._
 ![Vista previa de la aplicación](vista_previa.png)
+
+
+## 💡 Créditos
+
+Desarrollado por Melanie San Román ✨
+
+---
+
+¡Gracias por usar esta herramienta! 🖌️
