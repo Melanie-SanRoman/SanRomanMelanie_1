@@ -2,7 +2,7 @@ const CANVAS = document.getElementById("miCanvas"); // Captura el canvas y lo gu
 const CXT = CANVAS.getContext('2d'); // Obtiene el contexto y lo guarda en una variable
 
 const MODAL = document.querySelector('.modal');
-let INFO_MODAL = document.querySelector('.info-modal');
+const INFO_MODAL = document.querySelector('.info-modal');
 const FIG_INFO = document.getElementById("figSelecc");
 
 // Define en variables ancho y alto del canvas
@@ -19,6 +19,7 @@ const CANT_FIG = 40; // Estable el tamaño maximo de figuras a crear
 let mouseUp = false;
 let mouseDown = false;
 
+// Define las variables que controlaran el offset en X e Y
 let offsetX = 0, offsetY = 0;
 
 // MANEJO DE EVENTOS
@@ -33,6 +34,7 @@ document.getElementById('btn-generar').addEventListener('click', generar);
 document.getElementById('btn-limpiar').addEventListener('click', limpiar);
 document.getElementById('btn-info').addEventListener('click', openModal);
 
+
 // DEFINICION DE FUNCION ONLOAD
 
 /**
@@ -45,6 +47,7 @@ function main() {
     document.getElementById("figSelecc").innerHTML = `No hay figura seleccionada`;
 }
 
+
 // DEFINICION DE FUNCIONES QUE CONTROLAN EL MODAL
 
 /**
@@ -56,9 +59,10 @@ function closeModal() {
 
     setTimeout(() => {
         MODAL.style.display = "none";
-        INFO_MODAL.classList.remove("fade-out"); // limpia por si lo vuelvo a abrir
+        INFO_MODAL.classList.remove("fade-out"); // limpia por si se se vuelve a abrir
     }, 400);
 }
+
 /**
  * Funcion que muestra el modal con su transicion
  */
@@ -70,12 +74,13 @@ function openModal() {
 
 /**
  * Funcion que actualiza el mensaje que indica la figura seleccionada
- * @param {*} nombre 
+ * @param {*} name 
  */
 function actualizarNameFig(name) {
     FIG_INFO.innerHTML = `<span class="icon">📌</span> La figura seleccionada es: <strong>${name}</strong>`;
 
     FIG_INFO.classList.remove("fade"); // reinicia animación
+    void FIG_INFO.offsetWidth;   
     FIG_INFO.classList.add("fade");    // vuelve a activar animación
 }
 
@@ -152,11 +157,11 @@ function clickFalse(e) {
     mouseDown = false;
     if (figSeleccionada) { // si hay una figura seleccionada
         figSeleccionada.setBorder(false); //setea su borde a false
-        dibujarFiguras(); // chequear -> redibuja, pero esta vez con la nueva condicion de border
+        dibujarFiguras(); // redibuja, pero esta vez con la nueva condicion de border
         document.getElementById("figSelecc").innerHTML = `No hay figura seleccionada`;
     }
     // limpia variables para que no se muevan si no se sigue haciendo click
-    figMoviendo = null;
+    figMove = null;
     figSeleccionada = null;
 }
 
@@ -170,9 +175,8 @@ function selecFig(e) {
     figSeleccionada = buscarFigura(x, y);
     if (figSeleccionada) {
         figSeleccionada.setBorder(true);
-        figSeleccionada.draw(); // chequear -> dibuja la imagen pero esta vez con la condicion de border en true
+        figSeleccionada.draw(); // dibuja la imagen pero esta vez con la condicion de border en true
         figMove = null; // define que ninguna figura esta en movimiento(solo queda seleccionada, se debe mover con el teclado)
-        //document.getElementById("figSelecc").innerHTML = `La figura seleccionada es: ${figSeleccionada.getName()}`;
 
         actualizarNameFig(figSeleccionada.getName());
     }
@@ -204,8 +208,9 @@ function keyMove(e) {
                 figSeleccionada.altY(2);
                 break;
         } // depende la tecla oprimida altera en un +-2, la posision de X e Y (posicion original x/y mas +2/-2)
+        dibujarFiguras(); // redibuja las figuras con su nueva posicion
     }
-    dibujarFiguras(); // redibuja las figuras con su nueva posicion
+    return;
 }
 
 /**
@@ -224,7 +229,7 @@ function generar() {
 function limpiar() {
     figuras = [];
     document.getElementById("figSelecc").innerHTML = `No hay figura seleccionada`;
-    pintarCanvas();
+    CXT.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 }
 
 /**
