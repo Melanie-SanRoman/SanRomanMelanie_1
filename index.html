@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="main()">
+    <div class="modal">
+        <span id="btn-close">&times;</span>
+        <div class="info-modal">
+            <h2>🧭 Modo de uso</h2>
+            <ul>
+                <li>Haz click en <strong>"GENERAR FIGURAS"</strong> para crear figuras aleatorias.</li>
+                <li>Haz <strong>click sobre una figura</strong> y mantenlo apretado para moverla con el mouse.</li>
+                <li>Haz <strong>doble click</strong> sobre una figura para seleccionarla.</li>
+                <li>Haz<strong> click nuevamente en la figura o en cualquier parte del lienzo</strong> para deseleccionarla.</li>
+                <li>Una vez seleccionada, puedes moverla con las <strong>flechas del teclado</strong> (↑ ↓ ← →).</li>
+                <li>Verás el <strong>nombre de la figura</strong> en la parte superior del lienzo al seleccionarla.</li>
+                <li>Haz click en <strong>"LIMPIAR"</strong> para limpiar el lienzo.</li>
+                <li>Presiona la ❌ en la esquina superior derecha para cerrar este mensaje. ¿Dudas? Vuelve a abrirlo
+                    desde el botón en la esquina inferior izquierda.</li>
+            </ul>
+            <p id="msj-grc">¡Gracias por usar esta herramienta! 🖌️</p>
+        </div>
+    </div>
+
+    <p id="figSelecc"></p>
+
+    <canvas id="miCanvas" width="800" height="600" tabindex="0" style="border-radius: 5px; border: rgb(245, 127, 164) solid 1px;"></canvas>
+
+    <div id="buttons">
+        <button class="btn" id="btn-limpiar" role="button"><span class="text">Limpiar</span></button>
+        <button class="btn" id="btn-generar" role="button"><span class="text">Generar figuras</span></button>
+    </div>
+
+    <div id="info">
+        <p>¿Tenés dudas?</p>
+        <button class="btn" id="btn-info"><span class="text">?</span></button>
+    </div>
+
+
+    <script src="js/comportamiento.js"></script>
+    <script src="js/Figura.js"></script>
+    <script src="js/Rectangle.js"></script>
+    <script src="js/Circle.js"></script>
+    <script src="js/Square.js"></script>
+    <script src="js/Triangle.js"></script>
+</body>
+
+</html>
