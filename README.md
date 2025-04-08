@@ -48,13 +48,13 @@ Esto permite:
  ┣ 📂 css
  ┃ ┗ 📜 style.css
  ┣ 📂 js
- ┃ ┣ 📜 main.js
- ┃ ┣ 📜 figura.js (superclase Figura)
- ┃ ┣ 📜 rectangulo.js
- ┃ ┣ 📜 circulo.js
- ┃ ┣ 📜 cuadrado.js
- ┃ ┗ 📜 triangulo.js
- ┗ 📸 captura.png
+ ┃ ┣ 📜 comportamiento.js
+ ┃ ┣ 📜 Figura.js (superclase Figura)
+ ┃ ┣ 📜 Rectangulo.js
+ ┃ ┣ 📜 Circulo.js
+ ┃ ┣ 📜 Cuadrado.js
+ ┃ ┗ 📜 Triangulo.js
+ ┗ 📸 vista_previa.png
 ```
 
 ## 🧠 Detalles técnicos
