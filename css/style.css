@@ -1,3 +1,6 @@
+/* CENTRAR EN PAGINA */
+
+/* Centra body y otros elementos */
 body, #info, #buttons{
   display: flex;
   justify-content: center; /* Centra horizontalmente */
@@ -6,18 +9,26 @@ body, #info, #buttons{
   flex-direction: column; /* Mantiene los elementos en columna */
 }
 
+/* CANVAS */
+
+/* Da estilo al canvas */
 canvas{
   border-radius: 5px; 
   border: rgb(245, 127, 164) 
-  solid 1px; outline: none;
+  solid 1px; 
+  outline: none;
 }
 
+/* BOTONES */
+
+/* Div que contiene botones de "LIMPIAR" y "GENERAR" */
 #buttons{
   bottom: 20px;
   position: fixed;
   left: 30px;
 }
 
+/* Clase que da estilo a botones */
 .btn {
   background: linear-gradient(to bottom right, rgb(245, 127, 164), rgb(202, 7, 69));
   border: 0;
@@ -43,6 +54,9 @@ canvas{
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(245, 127, 164, 0.5), .125rem .125rem 1rem rgba(202, 7, 69, 0.5);
 }
 
+/* FIGURA SELECCIONADA */
+
+/* Da estilo al <p> que contiene el nombre la figura seleccionada */
 #figSelecc {
   width: 800px;
   margin-top: 10px;
@@ -65,16 +79,17 @@ canvas{
   overflow: hidden; 
 }
 
+/* Icono */
 #figSelecc .icon {
   font-size: 18px;
-  color: #d80749;
 }
 
-/* Efecto cuando cambia el contenido */
+/* Animacion cuando cambia el contenido (nombre de la figura) */
 #figSelecc.fade {
   animation: fadeHighlight 0.5s ease;
 }
 
+/* Animaciones */
 @keyframes fadeHighlight {
   0% {
     background-color: #ffdce3;
@@ -86,7 +101,9 @@ canvas{
   }
 }
 
-/* Estilo del modal */
+/* MODAL */
+
+/* Da estilo al div modal */
 .modal {
   display: none;
   position: fixed; /* se ubica arriba del contenido */
@@ -98,7 +115,9 @@ canvas{
   background-color: rgba(0, 0, 0, 0.5); /* fondo negro transparente*/
   z-index: 1; /* Define la profundidad del elemento en la pantalla, o sea, si va adelante o detrás de otros elementos. */
 }
-.info-modal { /* contenido del modal */
+
+/* Da estilo al contenido del modal */
+.info-modal { 
   background-color: white; 
   padding: 20px;
   margin: 100px auto;
@@ -110,12 +129,15 @@ canvas{
   animation: fadeIn 0.8s ease;
   animation: fadeOut 0.8s ease;
 }
-.info-modal h2 { /*Modo de uso*/
+
+/* Modo de uso */
+.info-modal h2 { 
   margin-top: 0;
   color: #2c3e50;
 }
 
-.info-modal ul { /* lista*/
+/* Lista */
+.info-modal ul { 
   text-align: left;
   padding-left: 20px;
   font-size: 20px;
@@ -123,17 +145,19 @@ canvas{
   color: #333;
 }
 
-.info-modal li { /*items*/
+/* Items de lista */
+.info-modal li { 
   margin-bottom: 12px;
 }
 
-#msj-grc {
+/* Mensaje de gracias */
+#msj-grc { 
   margin-top: 20px;
   font-weight: bold;
   color: #27ae60;
 }
 
-/* Animación */
+/* Animación del modal, cuando se abre y se cierra*/
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
@@ -150,7 +174,9 @@ canvas{
 .info-modal.fade-out {
   animation: fadeOut 0.4s ease forwards;
 }
-#btn-close { /* boton para cerrar */
+
+/* boton para cerrar el modal*/
+#btn-close { 
   position: absolute;
   top: 10px;
   right: 15px;
@@ -164,6 +190,9 @@ canvas{
   cursor: pointer;
 }
 
+/* INFO */
+
+/* Div que contiene texto y boton */
 #info{
   position: fixed;
   bottom: 20px;
@@ -174,7 +203,8 @@ canvas{
   margin-top: 0px
 }
 
-#info p{
+/* Texto */
+#info p{ 
   margin: 5px 0px;
   font-family: "Segoe UI", sans-serif;
   font-weight: bold;
@@ -182,7 +212,8 @@ canvas{
   color: #2c3e50;
 }
 
-#btn-info {
+/* Boton */
+#btn-info { 
   font-size: 50px;
   background-color: #d80749;
   color: white;

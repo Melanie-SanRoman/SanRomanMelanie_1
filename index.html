@@ -7,8 +7,9 @@
     <title>Figuras</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body onload="main()">
+
+<!-- MODAL -->
     <div class="modal">
         <span id="btn-close">&times;</span>
         <div class="info-modal">
@@ -28,21 +29,25 @@
         </div>
     </div>
 
+<!-- FIGURA SELECCIONADA -->
     <p id="figSelecc"></p>
 
+<!-- CANVAS -->
     <canvas id="miCanvas" width="800" height="600" tabindex="0"></canvas>
 
+<!-- BOTONES -->
     <div id="buttons">
         <button class="btn" id="btn-limpiar" role="button"><span class="text">Limpiar</span></button>
         <button class="btn" id="btn-generar" role="button"><span class="text">Generar figuras</span></button>
     </div>
 
+<!-- INFO -->
     <div id="info">
         <p>¿Tenés dudas?</p>
         <button class="btn" id="btn-info"><span class="text">?</span></button>
     </div>
 
-
+<!-- INCLUSION DE ARCHIVOS JS -->
     <script src="js/comportamiento.js"></script>
     <script src="js/Figura.js"></script>
     <script src="js/Rectangle.js"></script>
@@ -50,5 +55,4 @@
     <script src="js/Square.js"></script>
     <script src="js/Triangle.js"></script>
 </body>
-
 </html>

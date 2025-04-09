@@ -42,7 +42,7 @@ document.getElementById('btn-info').addEventListener('click', openModal);
  */
 function main() {
     pintarCanvas();
-    openModal();
+    //openModal();
     // Escribe por pantalla 
     document.getElementById("figSelecc").innerHTML = `No hay figura seleccionada`;
 }
@@ -192,19 +192,19 @@ function keyMove(e) {
     if (figSeleccionada) { // si se oprime el teclado y hay una figura seleccionada
         switch (e.key) { // detecta el codigo del evento teclado
             case "ArrowLeft":
-                // left key pressed
+                // left key 
                 figSeleccionada.altX(-2);
                 break;
             case "ArrowUp":
-                // up key pressed
+                // up key 
                 figSeleccionada.altY(-2);
                 break;
             case "ArrowRight":
-                // right key pressed
+                // right key 
                 figSeleccionada.altX(2);
                 break;
             case 'ArrowDown':
-                // down key pressed
+                // down key 
                 figSeleccionada.altY(2);
                 break;
         } // depende la tecla oprimida altera en un +-2, la posision de X e Y (posicion original x/y mas +2/-2)

@@ -7,7 +7,7 @@ Este proyecto es una aplicación interactiva construida con HTML5 Canvas y JavaS
 
 ## 🚀 Funcionalidades
 
-- ✅ Generar figuras aleatorias con colores y posiciones al azar.
+- ✅ Generar figuras con colores y posiciones al azar.
 - ✏️ Mover figuras con el mouse o teclado.
 - 🔍 Seleccionar figuras haciendo doble clic.
 - 🧽 Limpiar el lienzo.
@@ -59,7 +59,7 @@ Esto permite:
 
 ## 🧠 Detalles técnicos
 
-- Soporta hasta 40 figuras aleatorias.
+- Soporta hasta 40 figuras.
 - Los círculos y cuadrados se generan en pares con colores complementarios.
 - Detección precisa de selección usando coordenadas relativas al canvas.
 
