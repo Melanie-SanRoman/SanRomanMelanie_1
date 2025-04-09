@@ -1,0 +1,19 @@
+uso del teclado:
+    https://www.kirupa.com/canvas/moving_shapes_canvas_keyboard.htm
+    https://plainenglish.io/blog/how-to-detect-arrow-key-presses-in-javascript-2c38192de0e8
+    https://naviscode.com/blog/eventos-de-teclado-en-javascript
+
+uso del mouse:
+    https://developer.mozilla.org/es/docs/Web/API/MouseEvent
+    https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event
+
+dibujar triangulo:
+    https://parzibyte.me/blog/2019/07/16/dibujar-triangulo-canvas-javascript/#google_vignette
+    https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+
+posicion relativa del mouse con respecto al canvas:
+    https://stackoverflow.com/questions/17130395/real-mouse-position-in-canvas
+
+modal:
+    https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/
+    https://stackoverflow.com/questions/11660710/css-transition-fade-in
